@@ -1,0 +1,11 @@
+Pyrogram>=2.0.106
+TgCrypto==1.2.5
+winloop==0.1.2
+python-dotenv
+cachetools
+pydub
+shazamio
+pyrate-limiter
+beautifulsoup4
+requests-futures
+SpeechRecognition
