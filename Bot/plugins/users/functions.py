@@ -117,7 +117,7 @@ def get_speech_to_text(chat_id, message_id, file_extension, bot_language, speech
             with AudioFile(chunk_file) as source:
                 try:
                     # Recognize speech from the chunk
-                    text = recognizer.recognize_google(recognizer.record(source), language=speech_language, pfilter=1)
+                    text = recognizer.recognize_google(recognizer.record(source), language=speech_language)
                     recognized_text += text
                 except (UnknownValueError, RequestError) as error:
                     # Handle recognition errors
@@ -132,7 +132,7 @@ def get_speech_to_text(chat_id, message_id, file_extension, bot_language, speech
             with normalized_sound.export(file_path, format='flac'):
                 with AudioFile(file_path) as source:
                     # Recognize speech from the audio
-                    recognized_text = recognizer.recognize_google(recognizer.record(source), language=speech_language, pfilter=1)
+                    recognized_text = recognizer.recognize_google(recognizer.record(source), language=speech_language)
         except (UnknownValueError, RequestError) as error:
             # Handle recognition errors
             recognized_text = locales[bot_language]['messages']['recognition_fail'] if isinstance(error, UnknownValueError) else locales[bot_language]['messages']['recognition_error']
