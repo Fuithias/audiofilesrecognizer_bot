@@ -5,6 +5,7 @@ python-dotenv
 cachetools
 pydub
 shazamio
+aiosqlite
 pyrate-limiter
 beautifulsoup4
 requests-futures
