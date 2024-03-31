@@ -147,8 +147,7 @@ async def bot_callbacks(_, update: CallbackQuery):
     elif update.data == 'actions_button':
         buttons = ['speech_to_text', 'recognize_track', 'back']
         markup = InlineKeyboardMarkup([
-            [InlineKeyboardButton(locales[bot_language]['buttons'][btn], f'{btn}_button') for btn in buttons[:-1]]
-        ] + [
+            [InlineKeyboardButton(locales[bot_language]['buttons'][btn], f'{btn}_button') for btn in buttons[:-1]],
             [InlineKeyboardButton(locales[bot_language]['buttons'][buttons[-1]], 'back_button')]
         ])
         message = locales[bot_language]['messages']['actions']
@@ -170,7 +169,8 @@ async def bot_callbacks(_, update: CallbackQuery):
     elif update.data == 'language_button':
         buttons = ['bot_language', 'speech_language', 'back']
         markup = InlineKeyboardMarkup([
-            [InlineKeyboardButton(locales[bot_language]['buttons'][btn], f'{btn}_button') for btn in buttons[:-1]],
+            [InlineKeyboardButton(locales[bot_language]['buttons'][btn], f'{btn}_button')] for btn in buttons[:-1]
+        ] + [
             [InlineKeyboardButton(locales[bot_language]['buttons'][buttons[-1]], 'back_button')]
         ])
         message = locales[bot_language]['messages']['actions']
