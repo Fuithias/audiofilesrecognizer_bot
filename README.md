@@ -42,7 +42,7 @@ pip install -r requirements.txt
 3. **Set Up Telegram Bot:**
 - Create a new bot on Telegram using BotFather.
 - Obtain the API token for your bot.
-- Obtain Telgram API token for pyrogram.
+- Obtain Telgram API token for pyrogram here https://core.telegram.org/api/obtaining_api_id.
 - Update the `Config/setup.env` file with your bot's API token.
 ```
 API_ID=00000000
