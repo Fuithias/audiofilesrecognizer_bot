@@ -1,6 +1,6 @@
+*.pyc
+*.session
 Config/setup.env
-Temp/*
-Logs/*
-Database/*
-.pyc
-.session
+/Database
+/Logs
+/Temp
