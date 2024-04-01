@@ -106,8 +106,8 @@ def get_speech_to_text(chat_id, message_id, file_extension, bot_language, speech
     recognizer = Recognizer()  # Initialize the speech recognizer
     file_path = f'{TEMP_DIR}/{chat_id}_{message_id}.flac'
 
-    if len(normalized_sound) > 38000:  # If audio length exceeds 38 seconds, split into chunks
-        chunk_size = 25000
+    if len(normalized_sound) > 21500:  # If audio length exceeds 38 seconds, split into chunks
+        chunk_size = 21500
         recognized_text = ''
 
         for i, chunk in enumerate(normalized_sound[i:i + chunk_size] for i in range(0, len(normalized_sound), chunk_size)):
@@ -118,7 +118,7 @@ def get_speech_to_text(chat_id, message_id, file_extension, bot_language, speech
                 try:
                     # Recognize speech from the chunk
                     text = recognizer.recognize_google(recognizer.record(source), language=speech_language)
-                    recognized_text += text
+                    recognized_text += text if i == 0 else f' {text}'
                 except (UnknownValueError, RequestError) as error:
                     # Handle recognition errors
                     recognized_text += locales[bot_language]['messages']['recognition_fail'] if isinstance(error, UnknownValueError) else locales[bot_language]['messages']['recognition_error']
