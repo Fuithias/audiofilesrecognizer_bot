@@ -51,5 +51,5 @@ BOT_TOKEN=000000:AAAAAAAAAAAAAAAAAAAA
 
 4. **Run the Bot:**
 ```
-python -B -m Bot
+python -m Bot
 ```
