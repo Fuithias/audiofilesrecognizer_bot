@@ -1,0 +1,6 @@
+Config/setup.env
+Temp/*
+Logs/*
+Database/*
+.pyc
+.session
