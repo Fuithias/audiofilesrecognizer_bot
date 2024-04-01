@@ -33,6 +33,7 @@ Audiofiles Recognizer Bot is a Telegram bot designed for speech-to-text conversi
 To deploy your own instance of Audiofiles Recognizer Bot, follow these steps:
 
 1. **Clone the Repository and install Dependencies:**
+- Note that this bot developed and tested with Python 3.11.
 ```
 git clone https://github.com/your_username/Audiofiles-Recognizer-Bot.git
 pip install -r requirements.txt
@@ -41,15 +42,16 @@ pip install -r requirements.txt
 3. **Set Up Telegram Bot:**
 - Create a new bot on Telegram using BotFather.
 - Obtain the API token for your bot.
-- Obtain Telgram API token for pyrogram.
-- Update the `Config/setup.env` file with your bot's API token.
+- Obtain Telgram API token for pyrogram here https://core.telegram.org/api/obtaining_api_id.
+- Update the `Config/setup.env` file with your bot and app API token.
 ```
 API_ID=00000000
 API_HASH=aaaaaaaaaaaa
 BOT_TOKEN=000000:AAAAAAAAAAAAAAAAAAAA
 ```
 
-4. **Run the Bot:**
+4. **Run the Bot with following .bat file or open Terminal in main folder and type this:**
 ```
 python -m Bot
+pause
 ```
