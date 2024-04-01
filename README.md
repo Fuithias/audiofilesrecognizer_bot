@@ -42,7 +42,7 @@ pip install -r requirements.txt
 - Create a new bot on Telegram using BotFather.
 - Obtain the API token for your bot.
 - Obtain Telgram API token for pyrogram.
-- Update the `config.py` file with your bot's API token.
+- Update the `Config/setup.env` file with your bot's API token.
 ```
 API_ID=00000000
 API_HASH=aaaaaaaaaaaa
