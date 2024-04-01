@@ -1,1 +1,2 @@
 python -m Bot
+pause
