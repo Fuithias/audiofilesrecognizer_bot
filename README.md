@@ -33,6 +33,7 @@ Audiofiles Recognizer Bot is a Telegram bot designed for speech-to-text conversi
 To deploy your own instance of Audiofiles Recognizer Bot, follow these steps:
 
 1. **Clone the Repository and install Dependencies:**
+- Note that this bot developed and tested with Python 3.11.
 ```
 git clone https://github.com/your_username/Audiofiles-Recognizer-Bot.git
 pip install -r requirements.txt
