@@ -53,4 +53,5 @@ BOT_TOKEN=000000:AAAAAAAAAAAAAAAAAAAA
 4. **Run the Bot with following .bat file or open Terminal in main folder and type this:**
 ```
 python -m Bot
+pause
 ```
