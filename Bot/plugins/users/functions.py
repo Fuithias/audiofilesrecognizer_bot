@@ -109,6 +109,8 @@ def get_speech_to_text(chat_id, message_id, file_extension, bot_language, speech
     if len(normalized_sound) > 21500:  # If audio length exceeds 38 seconds, split into chunks
         chunk_size = 21500
         recognized_text = ''
+        fail_message = locales[bot_language]['messages']['recognition_fail']
+        error_message = locales[bot_language]['messages']['recognition_error']
 
         for i, chunk in enumerate(normalized_sound[i:i + chunk_size] for i in range(0, len(normalized_sound), chunk_size)):
             chunk_file = f'{TEMP_DIR}/{chat_id}_{message_id}_{i}.flac'
@@ -121,7 +123,10 @@ def get_speech_to_text(chat_id, message_id, file_extension, bot_language, speech
                     recognized_text += text if i == 0 else f' {text}'
                 except (UnknownValueError, RequestError) as error:
                     # Handle recognition errors
-                    recognized_text += locales[bot_language]['messages']['recognition_fail'] if isinstance(error, UnknownValueError) else locales[bot_language]['messages']['recognition_error']
+                    if i == 0:
+                        recognized_text += fail_message if isinstance(error, UnknownValueError) else error_message
+                    else:
+                        pass
 
             os.remove(chunk_file)  # Remove the chunk file after processing
 
