@@ -4,3 +4,4 @@ Config/setup.env
 /Database
 /Logs
 /Temp
+*.session-journal
