@@ -5,7 +5,7 @@
 Audiofiles Recognizer Bot is a Telegram bot designed for speech-to-text conversion and track recognition using Shazam. This bot provides a convenient way to transcribe audio messages into text and identify music tracks.
 
 <div align="center">
-<img src="https://media.discordapp.net/attachments/284756918331899904/1223997422158483546/aboba.png?ex=661be36e&is=66096e6e&hm=1414bd2fc76b53662d7afd6922c240244701a45a14bfd47f8852d0130d70c62d&=&format=webp&quality=lossless" align="center" style="width: 75%" />
+<img src="https://cdn.discordapp.com/attachments/284756918331899904/1223997422158483546/aboba.png?ex=66456aae&is=6644192e&hm=d1fd3074cad91aadd36a6026474d9120f3a29b353d8e278f9b93a5f60fb0e437&" align="center" style="width: 75%" />
 </div>
 
 <div align="center">
